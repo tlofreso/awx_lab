@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Server Builder</title>
-</head>
+{% block content %}
+<div class="container-sm">
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <legend class="border-bottom mb-4">Build a New Server</legend>
+    </div>
+<div class="form-group">
+        {{ form.name.label(class="form-control-label")}}
+        {{ form.name(class="form-control form-control-sm") }}
+    </div>
+<br>
+<div class="form-group d-grid gap-2 col-6 mx-auto">
+        {{ form.submit(class="btn btn-primary btn-sm") }}
+    </div>
+</form>
+</div>
 
-<body>
-    <h2>Build a New Server</h2>
-    <form action="" metho="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.name }}
-        </p>
-        <p>
-            {{ form.submit() }}
-        </p>
-    </form>
-</body>
 
-</html>
+{% endblock %}
