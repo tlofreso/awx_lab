@@ -7,10 +7,29 @@
     <div class="form-group">
         <legend class="border-bottom mb-4">Build a New Server</legend>
     </div>
-<div class="form-group">
+<div class="form-row">
+        <div class="form-group">
         {{ form.name.label(class="form-control-label")}}
         {{ form.name(class="form-control form-control-sm") }}
     </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        {{ form.region.label(class="form-control-label")}}
+        {{ form.region(class="form-check") }}
+    </div>
+<div class="form-group col-md-6">
+    {{ form.size.label(class="form-control-label")}}
+{{ form.size(class="form-check") }}
+</div>
+</div>
+
+
+{{ form.image.label(class="form-control-label")}}
+<div class="dropdown">
+        {{ form.image(class="btn btn-secondary dropdown-toggle") }}
+    </div>
+</div>
 <br>
 <div class="form-group d-grid gap-2 col-6 mx-auto">
         {{ form.submit(class="btn btn-primary btn-sm") }}
