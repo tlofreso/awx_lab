@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <h4>Let's build a new server.</h4>
+    <h2>Build a New Server</h2>
+    <form action="" metho="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
 </body>
 
 </html>
